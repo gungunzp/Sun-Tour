@@ -1,0 +1,591 @@
+/*--------- adjustment ----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font: 400 14px Arial, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    max-width: calc(1040px + 15px*2);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container_no_pad {
+	padding: 0;
+}
+
+@media (min-width: 1040px) {
+	.container_no_pad {
+    	padding: 0 15px;
+	}
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+}
+
+/* --------------- header ----------------- */
+
+.header {
+    color: #fff;
+    background: #00bff3;
+    padding: 20px 0;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.header {
+		padding: 30px 0 28px;
+		text-align: left;
+	}
+		.logo {
+			float: left;
+			width: 43%;
+		}
+}
+			.logo h1,
+			.logo_desc {
+				display: inline-block;
+				color: #fff;
+				vertical-align: middle;
+			}
+			.logo h1 {
+				background: url(../img/sun_tour_logo.png) no-repeat 0 0;
+				height: 43px;
+				width: 178px;
+				text-indent: -1000px;
+				margin: 0;
+			}
+			.logo_desc {
+				font-size: 16px;
+				text-align: right;
+				padding: 5px 7px 0;
+			}
+	.tel {
+		vertical-align: middle;
+		padding-top: 9px;
+	}
+	@media (min-width: 768px) {
+		.tel {
+			float: right;
+			width: 40%;
+		}
+	}
+			.tel span {
+				font-size: 30px;
+				margin-right: 24px;
+				vertical-align: middle;
+			}
+			.tel a {
+				color: #fff;
+				font-size: 16px;
+				vertical-align: middle;
+				border-bottom: 1px dotted #fff;
+				white-space: nowrap;
+				margin: 0 5px;
+				transition: all .2s ease-in-out;
+			}
+			.tel a:hover {
+				border-bottom: 1px dotted #00bff3;
+			}
+	.social {
+		padding-top: 5px;
+	}
+	@media (min-width: 768px) {
+		.social {
+			float: right;
+			width: 122px;
+			padding-top: 0;
+		}
+	}
+			.social a {
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				text-align: center;
+				margin: 8px 0 0 8px;
+			}
+				.social a svg {
+					height: 30px;
+					width: 25px;
+					transition: all .2s ease-in-out;
+				}
+		.header .social a {
+			background-color: #fff;
+		}
+		.header .social a:hover {
+			background-color: #0ee;
+		}
+			.header .social a svg {
+				fill: #00bff3;
+			}
+			.header .social a:hover svg {
+				fill: #f5fdff;
+			}
+
+/* --------------- hotel ------------------ */
+
+.banner {
+    position: relative;
+}
+	.banner img {
+		width: 100%;
+		min-height: 260px;
+	}
+	.actual_tour {
+		position: absolute;
+		height: 230px;
+		width: 230px;
+		bottom: 9%;
+		left: 30px;
+		background-color: rgba(255, 242, 0, .7);
+		border-radius: 50%;
+		color: #000;
+		font-family: "Trebuchet MS", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		padding: 30px 40px;
+		transform: scale(1) rotate(0);
+    	transition: all .3s ease-in-out;
+	}
+	.actual_tour:hover {
+		transform: scale(1.01) rotate(720deg);
+	}
+		.tour_title {
+			font-size: 25px;
+			padding-bottom: 15px;
+		}
+		.tour_code {
+			display: inline-block;
+			color: #fff;
+			background-color: #000;
+			border-radius: 2px;
+			font-size: 24px;
+			line-height: 30px;
+			margin: 5px 0;
+			padding: 0 5px;
+		}
+
+.hotel_about {
+	float: left;
+	font-weight: bold;
+}
+	.hotel_heading {
+		font-family: "Trebuchet MS", sans-serif;
+		font-size: 32px;
+		margin: 10px 0 15px;
+	}
+	@media (min-width: 768px) {
+		.hotel_heading {
+			font-size: 35px;
+		}
+	}
+		.hotel_heading a {
+			color: #000;
+			border-bottom: 1px solid #7f7f7f;
+		}
+		.hotel_heading a:hover {
+			border-bottom: 1px solid #fff;
+		}
+		.hotel_rate {
+			display: inline-block;
+			margin: 10px 0;
+		}
+			.stars {
+				display: inline-block;
+				height: 28px;
+				width: 99px;
+				background: url(../img/star.png) repeat-x 0;
+				margin: 0 20px;
+			}
+	.hotel_about table {
+		border-collapse: collapse;
+	}
+		.hotel_about th {
+			font-size: 12.5px;
+			line-height: 1.4;
+			vertical-align: bottom;
+			padding-right: 20px;
+		}
+		.hotel_about th:first-child {
+			font-size: 13.5px;
+			padding-right: 30px;
+		}
+		.hotel_about th:last-child {
+			padding-right: 0;
+		}
+		.hotel_about td {
+			font-size: 18px;
+			line-height: 1;
+			vertical-align: top;
+		}
+		th[rowspan="2"] {
+			width: 50px;
+			height: 50px;
+			background-color: #00bff3;
+			border-radius: 2px;
+			color: #fff;
+			font-family: "Trebuchet MS", sans-serif;
+			font-size: 24px;
+			text-align: center;
+			vertical-align: middle;
+			padding: 0;
+		}
+		th[rowspan="2"]+th {
+			padding-right: 25px;
+		}
+		.grey {
+			color: #777;
+		}
+		td.small {
+			font-size: 14px;
+		}
+		th.grey {
+			text-transform: uppercase;
+		}
+		.hotel_about th:nth-child(4),
+		.hotel_about td:nth-child(3),
+		.hotel_about th:nth-child(5),
+		.hotel_about td:nth-child(4),
+		.hotel_about th:nth-child(6),
+		.hotel_about td:nth-child(5),
+		.hotel_about th:nth-child(7),
+		.hotel_about td:nth-child(6) {
+			display: none;
+		}
+	@media (min-width: 768px) {
+		.hotel_about th:nth-child(4),
+		.hotel_about td:nth-child(3),
+		.hotel_about th:nth-child(5),
+		.hotel_about td:nth-child(4),
+		.hotel_about th:nth-child(6),
+		.hotel_about td:nth-child(5),
+		.hotel_about th:nth-child(7),
+		.hotel_about td:nth-child(6) {
+			display: table-cell;
+		}
+	}
+
+.feature {
+	display: none;
+}
+@media (min-width: 768px) {
+	.feature {
+		display: block;
+		position: relative;
+		float: right;
+		top: -22px;
+		padding-right: calc(22% - 140px);
+	}
+		.feature div.grey {
+			font: 100px / .8 "Trebuchet MS", sans-serif;
+		}
+		.feature_desc {
+			font-size: 30px;
+			line-height: 1.07;
+			padding: 5px 0 0 8px;
+		}
+}
+
+/* --------------- services ---------------- */
+
+.services {
+	padding: 24px 0 19px 0;
+}
+
+@media (min-width: 768px) {
+	.col_2 {
+		float: left;
+		width: 48.3%;
+		margin-right: 3.3%;
+	}
+	.col_2:last-child {
+		margin-right: 0;
+	}
+}
+		.services img {
+			width: 100%;
+		}
+		.service_title {
+			float: left;
+			width: 66%;
+			padding-top: 16px;
+		}
+			.service_title a {
+				color: #000;
+				font: bold 30px "Trebuchet MS", sans-serif;
+				line-height: 1.1;
+				border-bottom: 1px solid #ccc;
+			}
+			.service_title a:hover {
+				border-bottom: 1px solid #fff;
+			}
+			.service_desc {
+				color: #777;
+				padding: 14px 0;
+			}
+		.service_price {
+			float: right;
+			font-family: "Trebuchet MS", sans-serif;
+			text-align: right;
+		}
+			.service_price_new {
+				color: #000;
+				font-size: 38px;
+				font-weight: bold;
+				line-height: 1.1;
+				padding-top: 16px;
+			}
+			@media (min-width: 768px) {
+				.service_price_new {
+					font-size: 50px;
+					padding-top: 0;
+				}
+			}
+			.service_price_old {
+				display: inline-block;
+				position: relative;
+				color: #777;
+				font-size: 20px;
+				padding: 0 4px;
+			}
+				.canceled {
+					position: absolute;
+					top: 47%;
+					left: 0;
+					height: 1px;
+					width: 100%;
+					background-color: #f00;
+				}
+
+/* --------------- main ---------------- */
+
+.main .container {
+	border-bottom: 1px solid #777;
+	padding-bottom: 44px;
+}
+	.main h2 {
+		position: relative;
+		font: bold 36px "Trebuchet MS", sans-serif;
+		line-height: 1.1;
+		margin: 10px 0;
+	}
+	@media (min-width: 768px) {
+		.main h2 {
+			font-size: 4.5vw;
+			word-break: break-all;
+			padding-right: 3vw;
+			margin: 23px 0;
+		}
+		.main h2:after {
+			position: absolute;
+			content: '-';
+			top: 0;
+			right: 2.5vw;
+		}
+	}
+	@media (min-width: 1085px) {
+		.main h2 {
+			font-size: 50px;
+			padding-right: 20px;
+		}
+		.main h2:after {
+			right: 20px;
+		}
+	}
+	.side_cite {
+		display: none;
+	}
+	@media (min-width: 768px) {
+		.side_cite {
+			display: block;
+			float: right;
+			width: 205px;
+			font-family: "Trebuchet MS", sans-serif;
+			margin-top: 195px;
+		}
+			.ratio_value {
+				color: #777;
+				font-size: 100px;
+				line-height: 1.1;
+			}
+			.ratio_name {
+				font-size: 30px;
+				line-height: 1.1;
+			}
+			.ratio_desc {
+				position: relative;
+				color: #777;
+				font-size: 20px;
+				margin-top: 15px;
+				padding-bottom: 23px;
+			}
+				.minus_left_pos {
+					position: absolute;
+					bottom: 0;
+					left: -10px;
+				}
+	}
+	@media (min-width: 768px) {
+		.content {
+			margin-right: 265px;
+		}
+	}
+		.content_intro {
+			max-width: 740px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 1.38;
+			margin-bottom: 16px;
+		}
+		.content h3 {
+			font-size: 22px;
+			font-weight: bold;
+			margin: 0 0 3px;
+		}
+		.content p {
+			margin: 0 0 14px;
+			line-height: 1.45;
+		}
+		.content cite {
+			display: block;
+			font-style: normal;
+			line-height: 1.44;
+			background-color: #f0fbfe;
+			background-color: rgba(0, 191, 243, .059);
+			border-left: 3px solid #33ccf5;
+			border-left: 3px solid rgba(0, 191, 243, .8);
+			margin: 17px 0 12px 26px;
+			padding: 12px 10px 17px;
+		}
+		.content h4 {
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 19px;
+		}
+		.content p.special_margin {
+			margin: 19px 0 8px;
+		}
+		.content table {
+			display: none;
+		}
+		@media (min-width: 768px) {
+			.content table {
+				display: table;
+				border-collapse: collapse;
+				margin: 30px 0 23px;
+			}
+				.content table tr {
+					border-bottom: 1px solid #ebebeb;
+				}
+				.content table tr:first-child {
+					border-bottom: 1px solid #777;
+				}
+				.content table tr:last-child {
+					border: none;
+				}
+					.content table th {
+						width: 130px;
+						background-color: #ebebeb;
+						font-size: 12px;
+						font-weight: bold;
+						padding: 8px 0 6px;
+					}
+					.content table th:first-child {
+						width: 100px;
+						border-radius: 3px 0 0 0;
+					}
+					.content table th:last-child {
+						border-radius: 0 3px 0 0;
+					}
+					.content table td {
+						line-height: 2;
+						padding: 0 0 2px 20px;
+					}
+						.content table td sub {
+							font-size: 8.4px;
+							line-height: 1.7;
+							vertical-align: bottom;
+						}
+					.content table td:first-child {
+						font-size: 12px;
+						font-weight: bold;
+					}
+		}
+		.content ul li {
+			display: list-item;
+			padding: 7px 0 0 10px;
+		}
+
+/* --------------- footer ---------------- */
+
+.footer {
+	padding: 1px 0 45px;
+}
+	.footer_text {
+		font-size: 11.5px;
+		padding-top: 12px;
+	}
+	@media (min-width: 768px) {
+		.footer_text {
+			float: left;
+		}
+	}
+		.footer_text a {
+			color: #00a2ff;
+			border-bottom: 1px solid #ccecff;
+		}
+		.footer_text a:hover {
+			border-bottom: 1px solid #fff;
+		}
+		.footer .social a {
+			background-color: #00bff3;
+		}
+		.footer .social a:hover {
+			background-color: #0ee;
+		}
+		.footer .social a:first-child {
+			margin-left: 0;
+		}
+		@media (min-width: 768px) {
+			.footer .social a:first-child {
+				margin-left: 8px;
+			}
+		}
+			.footer .social a svg {
+				fill: #fff;
+			}
