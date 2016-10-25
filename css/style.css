@@ -478,12 +478,10 @@ a {
 			margin: 0 0 3px;
 		}
 		.content p {
-			margin: 0 0 14px;
 			line-height: 1.45;
+			margin: 0 0 14px;
 		}
-		.content cite {
-			display: block;
-			font-style: normal;
+		.content blockquote {
 			line-height: 1.44;
 			background-color: #f0fbfe;
 			background-color: rgba(0, 191, 243, .059);
